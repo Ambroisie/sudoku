@@ -10,6 +10,7 @@ project(
 
 sources = [
   'src/main.c',
+  'src/sudoku.c',
 ]
 
 executable(
