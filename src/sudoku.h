@@ -10,5 +10,7 @@ struct sudoku {
 
 bool parse_grid_file(struct sudoku *grid, FILE *input);
 bool parse_grid_str(struct sudoku *grid, const char *input);
+bool parse_line_file(struct sudoku *grid, FILE *input);
+bool parse_line_str(struct sudoku *grid, const char *input);
 
 #endif /* !SUDOKU_H */
