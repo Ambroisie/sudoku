@@ -70,3 +70,37 @@ bool parse_line_str(struct sudoku *grid, const char *input) {
 
     return true;
 }
+
+bool print_grid(const struct sudoku *grid, FILE *output) {
+    if (!output || !grid)
+        return false;
+
+    for (size_t i = 0; i < 9; ++i) {
+        const int *line = grid->grid[i];
+
+        if (fprintf(output, INPUT_PATTERN, line[0], line[1], line[2], line[3],
+                    line[4], line[5], line[6], line[7], line[8])
+            < 18)
+            return false;
+    }
+
+    return true;
+}
+
+bool print_line(const struct sudoku *grid, FILE *output) {
+    if (!output || !grid)
+        return false;
+
+    for (size_t i = 0; i < 9; ++i) {
+        for (size_t j = 0; j < 9; ++j) {
+            if (fputc(grid->grid[i][j] ? '0' + grid->grid[i][j] : '.', output)
+                == EOF)
+                return false;
+        }
+    }
+
+    if (fputc('\n', output) == EOF)
+        return false;
+
+    return true;
+}
