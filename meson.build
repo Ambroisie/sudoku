@@ -9,6 +9,7 @@ project(
 )
 
 sources = [
+  'src/constraints.c',
   'src/main.c',
   'src/sudoku.c',
 ]
