@@ -48,3 +48,21 @@ bool square_violation(const struct sudoku *grid, size_t i, size_t j) {
 
     return false;
 }
+
+bool solved(const struct sudoku *grid) {
+    if (!grid)
+        return false;
+
+    for (size_t i = 0; i < 9; ++i) {
+        for (size_t j = 0; j < 9; ++j) {
+            if (line_violation(grid, i, j))
+                return false;
+            if (column_violation(grid, i, j))
+                return false;
+            if (square_violation(grid, i, j))
+                return false;
+        }
+    }
+
+    return true;
+}
