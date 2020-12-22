@@ -28,6 +28,7 @@ bool solve(struct sudoku *grid) {
         changed = false;
 
         changed |= update_sets(grid, possibilities);
+        changed |= single_occurrence(grid, possibilities);
     } while (changed);
 
     return solved(grid);
