@@ -13,6 +13,7 @@ sources = [
   'src/main.c',
   'src/solver/last_remaining.c',
   'src/solver/single_occurence.c',
+  'src/solver/slice_and_dice.c',
   'src/solver/solve.c',
   'src/solver/update_sets.c',
   'src/sudoku.c',
