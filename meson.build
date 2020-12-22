@@ -11,6 +11,7 @@ project(
 sources = [
   'src/constraints.c',
   'src/main.c',
+  'src/solver/last_remaining.c',
   'src/solver/single_occurence.c',
   'src/solver/solve.c',
   'src/solver/update_sets.c',

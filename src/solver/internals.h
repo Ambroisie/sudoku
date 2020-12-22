@@ -7,5 +7,6 @@ struct sudoku;
 
 bool update_sets(const struct sudoku *grid, bool possibilities[9][9][9]);
 bool single_occurrence(struct sudoku *grid, bool possibilities[9][9][9]);
+bool last_remaining(struct sudoku *grid);
 
 #endif /* !INTERNALS_H */
