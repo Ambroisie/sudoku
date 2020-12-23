@@ -1,5 +1,6 @@
 #include <stdio.h>
 
+#include "backtracking.h"
 #include "constraints.h"
 #include "solver/solve.h"
 #include "sudoku.h"
@@ -10,7 +11,7 @@ int main(void) {
     if (!parse_grid_file(&grid, stdin))
         return 1;
 
-    solve(&grid);
+    solve_backtracking(&grid);
 
     print_grid(&grid, stdout);
 
