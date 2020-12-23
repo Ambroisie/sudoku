@@ -9,6 +9,7 @@ project(
 )
 
 sources = [
+  'src/backtracking.c',
   'src/constraints.c',
   'src/main.c',
   'src/solver/last_remaining.c',
