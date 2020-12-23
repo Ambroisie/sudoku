@@ -55,6 +55,8 @@ bool solved(const struct sudoku *grid) {
 
     for (size_t i = 0; i < 9; ++i) {
         for (size_t j = 0; j < 9; ++j) {
+            if (!grid->grid[i][j])
+                return false;
             if (line_violation(grid, i, j))
                 return false;
             if (column_violation(grid, i, j))
